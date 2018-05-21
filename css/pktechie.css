@@ -2,12 +2,30 @@
 	@package pktechietheme
 */
 /*
+	Import
+	------------------------------------------------
+*/
+/*
+	@package pktechietheme
+*/
+/*
 	Variables
 	------------------------------------------------
 */
 /*
+	@package pktechietheme
+*/
+/*
 	Mixins
 	------------------------------------------------
+*/
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+/*
+	@package pktechietheme
 */
 /* 
 	Font Icon 
@@ -15,20 +33,31 @@
 */
 @font-face {
   font-family: 'pktechie-icon';
-  src: url("../fonts/pktechie-icon.eot?dxcjr7");
-  src: url("../fonts/pktechie-icon.eot?dxcjr7#iefix") format("embedded-opentype"), url("../fonts/pktechie-icon.ttf?dxcjr7") format("truetype"), url("../fonts/pktechie-icon.woff?dxcjr7") format("woff"), url("../fonts/pktechie-icon.svg?dxcjr7#pktechie-icon") format("svg");
+  src: url("../fonts/pktechie-icon.eot?o1l4o7");
+  src: url("../fonts/pktechie-icon.eot?o1l4o7#iefix") format("embedded-opentype"), url("../fonts/pktechie-icon.ttf?o1l4o7") format("truetype"), url("../fonts/pktechie-icon.woff?o1l4o7") format("woff"), url("../fonts/pktechie-icon.svg?o1l4o7#pktechie-icon") format("svg");
   font-weight: normal;
   font-style: normal; }
 .pktechie-icon {
-  font-family: "pktechie-icon" !important;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pktechie-icon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.pktechie-twitter:before {
+  content: "\e900"; }
+
+.pktechie-googleplus:before {
+  content: "\e901"; }
+
+.pktechie-facebook:before {
+  content: "\e902"; }
 
 .pktechie-audio:before {
   content: "\e800"; }
@@ -82,6 +111,17 @@
 body {
   font-family: "Raleway", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif; }
 
+a {
+  color: #000000;
+  -webkit-transition: color 320ms ease;
+  -moz-transition: color 320ms ease;
+  -ms-transition: color 320ms ease;
+  -o-transition: color 320ms ease;
+  transition: color 320ms ease; }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #333333; }
+
 .background-image {
   background-position: center center;
   background-size: cover;
@@ -104,8 +144,7 @@ body {
 .header-container {
   position: relative;
   display: block;
-  height: auto;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+  height: auto; }
 
 .site-title {
   color: #fff;
@@ -115,7 +154,8 @@ body {
 .site-description {
   font-size: 14px;
   color: #e46f55;
-  margin-top: 1em; }
+  margin-top: 1em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 
 /*.nav-container {
     position: absolute;
@@ -220,5 +260,138 @@ body {
         .navbar-pktechie li ul.dropdown-menu li a:hover, .navbar-pktechie li ul.dropdown-menu li a:focus, .navbar-pktechie li ul.dropdown-menu li a:visited {
           background: rgba(0, 0, 0, 0.25) !important;
           color: #fff; }
+
+/* 
+	Standard Post Format 
+	------------------------------------------------
+*/
+article {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  @media (max-width: 767px) {
+    article {
+      padding-top: 20px;
+      padding-bottom: 20px; } }
+
+h1 {
+  font-size: 48px;
+  font-weight: 200; }
+  h1 a {
+    color: #000000; }
+  h1.entry-title {
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0; }
+    h1.entry-title:before {
+      content: '<';
+      display: inline-block;
+      position: relative;
+      color: #e46f55; }
+    h1.entry-title:after {
+      content: '>';
+      display: inline-block;
+      position: relative;
+      color: #e46f55; }
+    h1.entry-title:before {
+      margin-right: 10px; }
+    h1.entry-title:after {
+      margin-left: 10px; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 26px; } }
+
+.entry-meta {
+  font-size: 13px;
+  font-weight: 200;
+  color: #898989;
+  margin-bottom: 20px; }
+  .entry-meta a {
+    font-weight: 500;
+    color: #898989; }
+    .entry-meta a:hover, .entry-meta a:focus {
+      color: #333333; }
+
+.standard-featured-link {
+  display: block;
+  position: relative; }
+  .standard-featured-link:hover .standard-featured:after, .standard-featured-link:focus .standard-featured:after {
+    background-color: rgba(0, 0, 0, 0); }
+
+.standard-featured {
+  height: 330px;
+  display: block;
+  position: relative; }
+  .standard-featured:after {
+    -webkit-transition: background-color 320ms ease;
+    -moz-transition: background-color 320ms ease;
+    -ms-transition: background-color 320ms ease;
+    -o-transition: background-color 320ms ease;
+    transition: background-color 320ms ease;
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.35); }
+  @media (max-width: 767px) {
+    .standard-featured {
+      height: 220px; } }
+
+.entry-excerpt {
+  margin: 30px 0 16px; }
+  .entry-excerpt p {
+    font-size: 17px;
+    line-height: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.02em; }
+
+.button-container {
+  margin-bottom: 30px; }
+
+.btn-pktechie,
+a.btn-pktechie,
+.entry-content a.btn-pktechie {
+  -webkit-transition: all 320ms ease;
+  -moz-transition: all 320ms ease;
+  -ms-transition: all 320ms ease;
+  -o-transition: all 320ms ease;
+  transition: all 320ms ease;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  color: #898989;
+  padding: 8px 12px;
+  border-radius: 0;
+  border: 1px solid #898989;
+  background-color: #f1ede4; }
+  .btn-pktechie:hover, .btn-pktechie:focus,
+  a.btn-pktechie:hover,
+  a.btn-pktechie:focus,
+  .entry-content a.btn-pktechie:hover,
+  .entry-content a.btn-pktechie:focus {
+    color: #ffffff;
+    border-color: #333333;
+    background-color: #e46f55; }
+
+.entry-footer {
+  padding: 10px 5px;
+  border-bottom: 4px solid #F1F1F1;
+  color: #898989;
+  text-transform: uppercase; }
+  .entry-footer a {
+    color: #898989;
+    display: inline-block;
+    font-size: 12px; }
+    .entry-footer a:hover, .entry-footer a:focus {
+      color: #333333; }
+  .entry-footer .tags-list .pktechie-icon {
+    margin-right: 10px; }
+  .entry-footer .tags-list a {
+    padding: 0 4px; }
+  .entry-footer .comments-link .pktechie-icon {
+    margin-left: 10px; }
 
 /*# sourceMappingURL=pktechie.css.map */
