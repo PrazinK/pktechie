@@ -458,4 +458,11 @@ a.btn-pktechie,
   width: 100%;
   height: 166px; }
 
+/* 
+	Video Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-video header {
+  margin-top: 40px; }
+
 /*# sourceMappingURL=pktechie.css.map */
