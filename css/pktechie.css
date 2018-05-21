@@ -440,4 +440,22 @@ a.btn-pktechie,
   .entry-excerpt.image-caption p {
     margin: 20px 0; }
 
+/* 
+	Audio Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-audio h1 {
+  font-size: 30px; }
+  .pktechie-format-audio h1.entry-title {
+    display: inline-block;
+    margin-right: 20px; }
+    .pktechie-format-audio h1.entry-title:before, .pktechie-format-audio h1.entry-title:after {
+      display: none; }
+.pktechie-format-audio .entry-meta {
+  display: inline-block;
+  margin-bottom: 0; }
+.pktechie-format-audio .entry-content iframe {
+  width: 100%;
+  height: 166px; }
+
 /*# sourceMappingURL=pktechie.css.map */
