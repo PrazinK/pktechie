@@ -8,6 +8,7 @@
 */
 @import 'base/variables';		//variables
 @import 'base/mixins';			//mixins
+@import 'base/placeholders';	//placeholders
 @import 'base/fonticon';		//font icons
 
 
@@ -62,10 +63,10 @@ a { color: $primary-color; @include animate( color, 320ms );
 }
 
 .site-description {
+    @extend %text-shadow;
     font-size: 14px;
     color: #e46f55;
     margin-top: 1em;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /*.nav-container {
@@ -329,6 +330,43 @@ a.btn-pktechie,
     .comments-link {
         .pktechie-icon {
             margin-left: 10px;
+        }
+    }
+}
+
+/* 
+	Image Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-image {
+    .entry-header {
+        height: 650px;
+        @extend %text-shadow;
+        position: relative;
+    }
+    h1,
+    .entry-meta,
+    .entry-header {
+        color: #ffffff;
+        a {
+            color: #ffffff;
+
+        }
+    }
+    h1 {
+        padding-top: 10px;
+    }
+}
+.entry-excerpt {
+    &.image-caption {
+        @extend %background-gradient;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        p {
+            margin: 20px 0;
         }
     }
 }

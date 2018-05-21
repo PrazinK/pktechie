@@ -27,6 +27,26 @@
 /*
 	@package pktechietheme
 */
+/*
+	Placeholder
+	------------------------------------------------
+*/
+.site-description, .pktechie-format-image .entry-header {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+
+.entry-excerpt.image-caption {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000', GradientType=0);
+  /* IE6-9 */ }
+
+/*
+	@package pktechietheme
+*/
 /* 
 	Font Icon 
 	------------------------------------------------
@@ -154,8 +174,7 @@ a {
 .site-description {
   font-size: 14px;
   color: #e46f55;
-  margin-top: 1em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
+  margin-top: 1em; }
 
 /*.nav-container {
     position: absolute;
@@ -393,5 +412,32 @@ a.btn-pktechie,
     padding: 0 4px; }
   .entry-footer .comments-link .pktechie-icon {
     margin-left: 10px; }
+
+/* 
+	Image Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-image .entry-header {
+  height: 650px;
+  position: relative; }
+.pktechie-format-image h1,
+.pktechie-format-image .entry-meta,
+.pktechie-format-image .entry-header {
+  color: #ffffff; }
+  .pktechie-format-image h1 a,
+  .pktechie-format-image .entry-meta a,
+  .pktechie-format-image .entry-header a {
+    color: #ffffff; }
+.pktechie-format-image h1 {
+  padding-top: 10px; }
+
+.entry-excerpt.image-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0; }
+  .entry-excerpt.image-caption p {
+    margin: 20px 0; }
 
 /*# sourceMappingURL=pktechie.css.map */
