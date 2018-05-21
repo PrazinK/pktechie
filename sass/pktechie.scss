@@ -186,6 +186,9 @@ a {
 article {
     padding-top: 40px;
     padding-bottom: 40px;
+    &:first-child{
+        padding-top: 80px;
+    }
     @media (max-width: $xs) {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -412,10 +415,22 @@ a.btn-pktechie,
 
 .pktechie-format-video {
     header {
-        margin-top: 40px;
         h1 {
             &.entry-title {
             }
             }
         }
     }
+
+/* 
+	Gallery Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-gallery {
+    .standard-featured {
+        height: 500px;
+        &:after {
+           background-color: transparent;
+        }
+    }
+}

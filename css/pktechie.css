@@ -287,6 +287,8 @@ a {
 article {
   padding-top: 40px;
   padding-bottom: 40px; }
+  article:first-child {
+    padding-top: 80px; }
   @media (max-width: 767px) {
     article {
       padding-top: 20px;
@@ -462,7 +464,13 @@ a.btn-pktechie,
 	Video Post Format 
 	------------------------------------------------
 */
-.pktechie-format-video header {
-  margin-top: 40px; }
+/* 
+	Gallery Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-gallery .standard-featured {
+  height: 500px; }
+  .pktechie-format-gallery .standard-featured:after {
+    background-color: transparent; }
 
 /*# sourceMappingURL=pktechie.css.map */

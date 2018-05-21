@@ -30,36 +30,34 @@
 	</head>
 
 <body <?php body_class(); ?>>
-    <div class="container">
+    <div class="container-fluid">
             
         <div class="row">
-            <div class="col-xs-12">
-                <header class="header-container background-image text-center" style="background: #f1ede4;">
-                    <div class="header-content table">
-                        <div class="table-cell">
-                            <h1 class="site-title pktechie-icon">
-                                <img src="http://prazin.com/wp-content/uploads/2018/05/logo.svg" width="100" alt="pktechie" />
-							    <span class="hide"><?php bloginfo( 'name' ); ?></span>
-                            </h1>
-                            <h2 class="site-description">
-                                <?php bloginfo( 'description' ); ?>
-                            </h2>
-                        </div><!-- .table-cell -->
-                    </div><!-- .header content -->
-                    <div class="nav-container">
-                        <nav class="navbar navbar-deafult navbar-pktechie">
-							<?php
-								wp_nav_menu( array(
-									'theme_location' => 'primary',
-									'container' => false,
-                                    'menu_class' => 'nav navbar-nav',
-                                    'walker' => new pktechie_Walker_Nav_Primary()
-								) );	
-							?>
-						</nav>
-                    </div><!-- .nav container -->
-                </header>
-            </div><!-- .col-xs-12 -->
+            <header class="header-container background-image text-center" style="background: #f1ede4;">
+                <div class="header-content table">
+                    <div class="table-cell">
+                        <h1 class="site-title pktechie-icon">
+                            <img src="http://prazin.com/wp-content/uploads/2018/05/logo.svg" width="100" alt="pktechie" />
+                            <span class="hide"><?php bloginfo( 'name' ); ?></span>
+                        </h1>
+                        <h2 class="site-description">
+                            <?php bloginfo( 'description' ); ?>
+                        </h2>
+                    </div><!-- .table-cell -->
+                </div><!-- .header content -->
+                <div class="nav-container">
+                    <nav class="navbar navbar-deafult navbar-pktechie">
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                'menu_class' => 'nav navbar-nav',
+                                'walker' => new pktechie_Walker_Nav_Primary()
+                            ) );	
+                        ?>
+                    </nav>
+                </div><!-- .nav container -->
+            </header>
         </div><!-- .row -->
             
     </div><!-- .container-fluid -->
