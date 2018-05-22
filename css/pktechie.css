@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	@package pktechietheme
 */
@@ -545,5 +546,30 @@ a.btn-pktechie,
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
+
+/* 
+	Quote Post Format 
+	------------------------------------------------
+*/
+.pktechie-format-quote .quote-content {
+  font-size: 42px;
+  font-weight: 100;
+  line-height: 1.3em;
+  letter-spacing: 0.03em; }
+  .pktechie-format-quote .quote-content:before, .pktechie-format-quote .quote-content:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    color: #ccc; }
+  .pktechie-format-quote .quote-content:before {
+    content: '“'; }
+  .pktechie-format-quote .quote-content:after {
+    content: '„'; }
+.pktechie-format-quote .quote-author {
+  color: #898989;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  margin-top: 10px;
+  margin-block-end: 30px; }
 
 /*# sourceMappingURL=pktechie.css.map */
